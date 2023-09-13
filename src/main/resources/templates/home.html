@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEbabClient</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="operations_container">
+            <h1>Kebab Client</h1>
+            <h2>List operations</h2>
+
+            <div class="get_ingredients_list_container">
+                <a href="/getIngredients">get_ingredients</a>
+                <textarea name="result" id="result" th:text=${ingArr} cols="85" rows="20">
+                </textarea>
+            </div>
+            <div class="add_ingredient_container">
+                <p>add ingredient</p>
+                <form th:action="@{/addIngredient}" method="post" th:object="${ing}">
+
+                    <label for="id">id</label>
+                    <input type="text" name="id" id="id" th:field="*{id}">
+
+                    <label for="ingredient_id">ingredient id</label>
+                    <input type="text" name="ingredient_id" id="ingredient_id" th:field="*{ingredient_id}">
+
+                    <label for="name">name</label>
+                    <input type="text" name="name" id="name" th:field="*{name}">
+
+                    <label for="type">type</label>
+                    <input type="text" name="type" id="type" th:field="*{type}">
+
+                    <button>Send ing.</button>
+                </form>
+            </div>
+
+            <div class="delete_ingredient_container">
+                <p>delete ingredient</p>
+                <form th:action="@{/deleteIngredient}" method="post">
+                    <label for="id1">id</label>
+                    <input type="text" name="id" id="id1">
+                    <button>Delete ing.</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

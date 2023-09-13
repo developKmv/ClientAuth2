@@ -1,0 +1,22 @@
+server:
+  port: 9090
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          kebab-admin-client:
+            provider: kebabcloud
+            client-id: kebab-admin-client
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://localhost:9090/login/oauth2/code/{registrationId}"
+            scope: writeIngredients,deleteIngredients,openid
+        provider:
+          kebabcloud:
+            issuer-uri: http://auth-server:9000
+            authorization-uri: http://auth-server:9000/oauth2/authorize
+            token-uri: http://auth-server:9000/oauth2/token
+            jwk-set-uri: http://auth-server:9000/oauth2/jwks
+            user-info-uri: http://auth-server:9000/userinfo

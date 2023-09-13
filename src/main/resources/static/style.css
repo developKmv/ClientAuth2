@@ -1,0 +1,68 @@
+.main_container{
+    display: flex;
+    justify-content: center;
+}
+
+.operations_container{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    height: auto;
+    align-items: center;
+    gap: 5px;
+}
+
+.get_ingredients_list_container{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 770px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    align-items:center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form input{
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+button{
+    width: 150px;
+}
+
+textarea {
+    width: 720px;
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    margin-bottom: 10px;
+  }
+
+  .add_ingredient_container {
+    width: 750px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+  }
+
+  .delete_ingredient_container{
+    width: 750px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+  }
+
+  p{
+    margin: 0px;
+  }
